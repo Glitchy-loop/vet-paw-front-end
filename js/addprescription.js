@@ -11,7 +11,6 @@ dogName.textContent = localStorage.getItem('petName')
 
 logOutBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    console.log('click')
     localStorage.removeItem('token')
     localStorage.removeItem('accountEmail')
     localStorage.removeItem('accountName')
@@ -48,7 +47,6 @@ const displayMeds = data => {
     option.textContent = med.attributes.title
     option.value = med.attributes.title
     option.id = med.id
-
     select.append(option)
   })
 }
