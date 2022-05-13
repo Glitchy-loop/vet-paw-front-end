@@ -32,13 +32,15 @@ const getLog = async () => {
     const data = await res.json()
 
     if (data.length > 0) {
-      displayLogs(data)
+      return displayLogs(data)
     }
+
     if (data.err) {
-      return (h1.textContent = data.err)
+      return (h2.textContent =
+        data.err || 'There was a a problem with a server.')
     }
   } catch (err) {
-    alert(err || 'Failed to fetch.')
+    h2.textContent = err || 'Failed to fetch.'
   }
 }
 
@@ -81,30 +83,30 @@ const displayLogs = data => {
 }
 
 // Get all prescriptions associated with this pet by ID
-const getPrescriptions = async () => {
-  try {
-    const res = await fetch(
-      `${baseUrl}/prescriptions/prescription/${Number(
-        location.search.replace('?id=', '')
-      )}`,
-      {
-        headers: {
-          authorization: `Bearer ${token}`
-        }
-      }
-    )
-    const data = await res.json()
-    console.log(data)
+// const getPrescriptions = async () => {
+//   try {
+//     const res = await fetch(
+//       `${baseUrl}/prescriptions/prescription/${Number(
+//         location.search.replace('?id=', '')
+//       )}`,
+//       {
+//         headers: {
+//           authorization: `Bearer ${token}`
+//         }
+//       }
+//     )
+//     const data = await res.json()
+//     console.log(data)
 
-    if (data.length > 0) {
-      displayLogs(data)
-    }
+//     if (data.length > 0) {
+//       displayLogs(data)
+//     }
 
-    if (data.err) {
-      return (h1.textContent = data.err)
-    }
-  } catch (err) {
-    alert(err || 'Failed to fetch.')
-  }
-}
-getPrescriptions()
+//     if (data.err) {
+//       return (h2.textContent = data.err)
+//     }
+//   } catch (err) {
+//     alert(err || 'Failed to fetch.')
+//   }
+// }
+// getPrescriptions()
