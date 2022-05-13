@@ -1,12 +1,12 @@
 const token = localStorage.getItem('token')
-const baseUrl = 'http://164.90.201.39:1337/api'
+const medUrl = 'http://164.90.201.39:1337/api'
 const boxes = document.querySelector('.boxes')
 const h2 = document.querySelector('.container h2')
 const logOutBtns = document.querySelectorAll('.logOutBtn')
+const search = document.getElementById('search')
 
 logOutBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    console.log('click')
     localStorage.removeItem('token')
     localStorage.removeItem('accountEmail')
     localStorage.removeItem('accountName')
@@ -21,10 +21,8 @@ if (!token) {
 // Get all medications from the database
 const getMeds = async () => {
   try {
-    const res = await fetch(`${baseUrl}/medications/`)
+    const res = await fetch(`${medUrl}/medications/`)
     const data = await res.json()
-
-    // console.log(data.data)
 
     if (data.data.length > 0) {
       displayAllMeds(data.data)

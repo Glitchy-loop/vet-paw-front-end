@@ -6,7 +6,6 @@ const logOutBtns = document.querySelectorAll('.logOutBtn')
 
 logOutBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    console.log('click')
     localStorage.removeItem('token')
     localStorage.removeItem('accountEmail')
     localStorage.removeItem('accountName')
@@ -18,17 +17,18 @@ if (!token) {
   location.replace('index.html')
 }
 
+// Add pet form
 form.addEventListener('submit', e => {
   e.preventDefault()
   const name = e.target.elements.name.value.trim()
   const clientEmail = e.target.elements.clientEmail.value.trim()
   const age = e.target.elements.age.value.trim()
-
   const details = { name, age, clientEmail }
 
   addPet(details)
 })
 
+// Add pet in the database
 const addPet = async petDetails => {
   try {
     const res = await fetch(`${baseUrl}/pets/add_pet`, {
@@ -39,7 +39,6 @@ const addPet = async petDetails => {
       body: JSON.stringify(petDetails)
     })
     const data = await res.json()
-    console.log(data)
 
     if (data.msg === 'Successfully added a pet.') {
       location.replace('home.html')

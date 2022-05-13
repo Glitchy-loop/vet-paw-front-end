@@ -6,7 +6,6 @@ const form = document.forms.addMedication
 
 logOutBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    console.log('click')
     localStorage.removeItem('token')
     localStorage.removeItem('accountEmail')
     localStorage.removeItem('accountName')
@@ -26,6 +25,7 @@ form.addEventListener('submit', e => {
   const description = e.target.elements.description.value.trim()
   const price = Number(e.target.elements.price.value.trim())
   const details = { title, description, price }
+
   addMedication(details)
 })
 

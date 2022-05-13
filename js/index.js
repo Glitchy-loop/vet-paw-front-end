@@ -2,7 +2,6 @@ const baseUrl = 'http://localhost:8080/v1'
 const form = document.forms.loginForm
 
 // Login form
-
 form.addEventListener('submit', e => {
   e.preventDefault()
 
@@ -12,8 +11,7 @@ form.addEventListener('submit', e => {
   loginUser({ email, password })
 })
 
-// Login user
-
+// Confirm user in the database and store data in the local storage
 const loginUser = async userData => {
   try {
     const res = await fetch(`${baseUrl}/users/login`, {

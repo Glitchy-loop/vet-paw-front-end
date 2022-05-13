@@ -199,6 +199,26 @@ form input[type="submit"] {
   margin-top: 2rem;
 }
 
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.filter #search {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  padding: .5rem;
+  border-radius: 0.4rem;
+  outline: none;
+  border: 2px solid #c5c5c5;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .goBack i {
   -webkit-transition: 500ms;
   transition: 500ms;
@@ -364,8 +384,8 @@ p {
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-2rem);
-            transform: translateY(-2rem);
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
   }
   to {
     opacity: 1;
@@ -377,8 +397,8 @@ p {
 @keyframes fadein {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-2rem);
-            transform: translateY(-2rem);
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
   }
   to {
     opacity: 1;

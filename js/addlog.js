@@ -7,7 +7,6 @@ const logOutBtns = document.querySelectorAll('.logOutBtn')
 
 logOutBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    console.log('click')
     localStorage.removeItem('token')
     localStorage.removeItem('accountEmail')
     localStorage.removeItem('accountName')
@@ -19,19 +18,18 @@ if (!token) {
   location.replace('index.html')
 }
 
+// Add log form
 form.addEventListener('submit', e => {
   e.preventDefault()
   const description = e.target.elements.description.value.trim()
   const status = e.target.elements.status.value.trim()
   const pet_id = Number(localStorage.getItem('petId'))
-
   const details = { pet_id, description, status }
-
-  console.log(details)
 
   addLog(details)
 })
 
+// Add log in the database
 const addLog = async petDetails => {
   try {
     const res = await fetch(`${baseUrl}/logs/add_log`, {
@@ -43,7 +41,6 @@ const addLog = async petDetails => {
       body: JSON.stringify(petDetails)
     })
     const data = await res.json()
-    console.log(data)
 
     if (data.msg === 'Successfully added a log.') {
       location.replace(`logs.html?id=${localStorage.getItem('petId')}`)

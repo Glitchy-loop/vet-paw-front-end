@@ -6,7 +6,6 @@ const logOutBtns = document.querySelectorAll('.logOutBtn')
 
 logOutBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    console.log('click')
     localStorage.removeItem('token')
     localStorage.removeItem('accountEmail')
     localStorage.removeItem('accountName')
@@ -18,6 +17,7 @@ if (!token) {
   location.replace('index.html')
 }
 
+// Change password form
 form.addEventListener('submit', e => {
   e.preventDefault()
 
@@ -28,6 +28,7 @@ form.addEventListener('submit', e => {
   changePass({ email, oldpass, newpass })
 })
 
+// Request password change in the database
 const changePass = async userData => {
   try {
     const res = await fetch(`${baseUrl}/users/changepass`, {

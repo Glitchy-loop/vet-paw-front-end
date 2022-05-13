@@ -7,7 +7,6 @@ const logOutBtns = document.querySelectorAll('.logOutBtn')
 
 logOutBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    console.log('click')
     localStorage.removeItem('token')
     localStorage.removeItem('accountEmail')
     localStorage.removeItem('accountName')
@@ -20,7 +19,6 @@ if (!token) {
 }
 
 // Get all logs associated with this pet by ID
-
 const getLog = async () => {
   try {
     const res = await fetch(
@@ -32,12 +30,10 @@ const getLog = async () => {
       }
     )
     const data = await res.json()
-    // console.log(data)
 
     if (data.length > 0) {
       displayLogs(data)
     }
-
     if (data.err) {
       return (h1.textContent = data.err)
     }
@@ -49,7 +45,6 @@ const getLog = async () => {
 getLog()
 
 // Display logs
-
 const displayLogs = data => {
   boxes.innerHTML = ``
 
@@ -86,7 +81,6 @@ const displayLogs = data => {
 }
 
 // Get all prescriptions associated with this pet by ID
-
 const getPrescriptions = async () => {
   try {
     const res = await fetch(

@@ -3,10 +3,10 @@ const baseUrl = 'http://localhost:8080/v1'
 const boxes = document.querySelector('.boxes')
 const h2 = document.querySelector('.boxes h2')
 const logOutBtns = document.querySelectorAll('.logOutBtn')
+const search = document.getElementById('search')
 
 logOutBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    console.log('click')
     localStorage.removeItem('token')
     localStorage.removeItem('accountEmail')
     localStorage.removeItem('accountName')
@@ -19,17 +19,13 @@ if (!token) {
 }
 
 // Get all pets from the database
-
 const getAllPets = async () => {
   try {
     const res = await fetch(`${baseUrl}/pets/`)
     const data = await res.json()
 
-    // console.log(data)
-
     if (data.length > 0) {
       const notArchivedPets = data.filter(pet => {
-        // console.log(pet.archived)
         return pet.archived === 0
       })
 
@@ -47,7 +43,6 @@ const getAllPets = async () => {
 getAllPets()
 
 // Display pets on the page
-
 const displayPets = data => {
   boxes.innerHTML = ``
 
@@ -86,8 +81,7 @@ const displayPets = data => {
     boxes.append(box)
   })
 
-  // Logs buttons // TODO
-
+  // Logs buttons
   const logBtns = document.querySelectorAll('.petLogBtn')
 
   logBtns.forEach(btn => {
@@ -96,13 +90,11 @@ const displayPets = data => {
       const petName = e.target.parentElement.parentElement.children[0].textContent.trim()
       localStorage.setItem('petName', petName)
       localStorage.setItem('petId', petId)
-
       location.replace(`logs.html?id=${petId}`)
     })
   })
 
   // Delete buttons
-
   const deleteBtns = document.querySelectorAll('.deleteBtns')
 
   deleteBtns.forEach(btn => {
@@ -117,7 +109,6 @@ const displayPets = data => {
 }
 
 // Archive pet in the server
-
 const deletePet = async petDetails => {
   try {
     const res = await fetch(`${baseUrl}/pets/delete_pet`, {
@@ -136,6 +127,30 @@ const deletePet = async petDetails => {
     if (data.err) {
       h2.textContent = data.err
     }
+  } catch (err) {
+    alert(err || 'Failed to fetch.')
+  }
+}
+
+// Search pets by name input
+search.addEventListener('keyup', e => {
+  const searchQuery = e.target.value.trim().toLowerCase()
+
+  if (searchQuery.length > 0) {
+    searchPetsByName(searchQuery)
+  }
+  if (searchQuery.length === 0) {
+    getAllPets()
+  }
+})
+
+// Send search query in the database
+const searchPetsByName = async searchQuery => {
+  try {
+    const res = await fetch(`${baseUrl}/pets/search/${searchQuery}`)
+    const data = await res.json()
+
+    displayPets(data)
   } catch (err) {
     alert(err || 'Failed to fetch.')
   }

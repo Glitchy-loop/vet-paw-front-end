@@ -1,6 +1,7 @@
 const baseUrl = 'http://localhost:8080/v1'
 const form = document.forms.registerForm
 
+// Register user form
 form.addEventListener('submit', e => {
   e.preventDefault()
 
@@ -17,6 +18,7 @@ form.addEventListener('submit', e => {
   }
 })
 
+// Register user to the database
 const registerUser = async userData => {
   try {
     const res = await fetch(`${baseUrl}/users/register`, {
@@ -27,8 +29,6 @@ const registerUser = async userData => {
       body: JSON.stringify(userData)
     })
     const data = await res.json()
-
-    console.log(data, data.msg)
 
     if (data.msg === 'Successfully created account') {
       location.replace('/index.html')
