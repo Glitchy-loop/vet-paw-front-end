@@ -1,0 +1,390 @@
+$primaryColor: #7e56da;
+$secondaryColor: #6524fc;
+$lightGreyColor: #c5c5c5;
+$darkGreyColor: #888888;
+$box-shadow:0px 0px 8px -2px $lightGreyColor;
+$border-radius: .4rem;
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+// Header
+
+h1,h2,p {
+    text-align: center;
+}
+
+header {
+    box-shadow: $box-shadow;
+
+    .desktop-nav {
+        display:none;
+        align-items: center;
+
+        li {
+            padding-left:1rem;
+        }
+    }
+
+    .container {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+
+        .logo {
+            display:flex;
+            align-items: center;
+            padding:2rem 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+    
+            img {
+                width: 3rem;
+            }
+
+            .logo-title {
+                font-size: 1.5rem;
+                color:#000;
+                font-weight: 600;
+                margin-left:.3rem;
+
+                span {
+                    font-weight:800;
+                    color:$primaryColor;
+                }
+            }
+        }
+
+        i {
+            font-size:1.5rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.container {
+    margin:0 2rem;
+}
+
+.container-flex {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .fa-arrow-right-from-bracket {
+        margin-left:2rem;
+        color:$darkGreyColor;
+    }
+}
+
+.container h2 span {
+    color:$primaryColor;
+}
+
+section {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:1rem;
+}
+
+// Navigation
+
+nav.visible {
+  max-height: 15rem;
+  opacity:1;
+  visibility: visible;
+}
+
+nav {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition:max-height 500ms, opacity 250ms, visibility 1s;
+
+    li {
+        list-style: none;
+        padding:.5rem 0;
+        font-weight: 800;
+
+        a {
+            text-decoration: none;
+            color:$primaryColor;
+            font-size:1.2rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.desktop-nav li:last-child a {
+    color:$darkGreyColor;
+}
+
+// Forms
+
+form {
+    display:flex;
+    flex-direction: column;
+    max-width: 20rem;
+    margin:2rem auto;
+
+    input:not(input[type="submit"]), label, select {
+        width: 100%;
+        margin:0 auto;
+        margin-top:.5rem;
+        font-size:1.2rem;
+        margin-top:1rem;
+    }
+
+    input:not(input[type="submit"]), select {
+        padding:.5rem;
+        border-radius: $border-radius;
+        outline:none;
+        border:2px solid $lightGreyColor;
+        transition:250ms;
+        box-sizing: border-box;
+
+        &:focus {
+            border-color: $primaryColor;
+        }
+    }
+
+    label {
+        font-weight: 600;
+    }
+
+    .btn-clean {
+        width: 10rem;
+    }
+
+    input[type="submit"] {
+        margin-top:2rem;
+    }
+}
+
+.goBack {
+
+    i {
+        transition:500ms;
+    }
+
+    &:hover {
+
+        i {
+            transform: rotateZ(-360deg);
+        }
+    }
+}
+
+// Boxes
+
+.boxes {
+    display:flex;
+    flex-wrap: wrap;
+
+    .box {
+        width: 100%;
+        padding:2rem;
+        box-shadow: $box-shadow;
+        font-size:1.2rem;
+        text-align: center;
+        margin:1rem .5rem;
+        word-break:break-all;
+        text-align: center;
+
+        .pet-buttons {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top:1rem;
+
+            button {
+                font-size:1rem;
+                padding: 1rem .5rem;
+                margin:0 .1rem;
+
+            }
+        }
+
+        .pet-name, .pet-age, .pet-owner, .injure-description, .status, .med-title, .med-description, .med-price {
+            padding:1rem 0;
+        }
+
+        .pet-name::before, .pet-age::before, .pet-owner::before, .injure-description::before, .status::before, .med-title::before, .med-description::before, .med-price::before  {
+            font-weight: 600;
+            color:$primaryColor;
+            margin-right:.5rem;
+        }
+
+        .pet-name::before {
+            content:'Name:';
+        }
+
+        .pet-age::before {
+            content:'Age:';
+        }
+
+        .pet-owner::before {
+            content:'Owner:';
+        }
+
+        .injure-description::before {
+            content:'Description:';
+        }
+
+        .status::before {
+            content:'Status:';
+        }
+
+        .med-title::before {
+            content:'Title:';
+        }
+
+        .med-description::before {
+            content:'Description:';
+        }
+
+        .med-price::before {
+            content:'Price:';
+        }
+
+        .med-price::after {
+            content:'€';
+        }
+    }
+}
+  
+// .log-box {
+//     text-align: left !important;
+// } 
+
+// Buttons
+
+.btn-primary, .btn-secondary {
+    background-color: $primaryColor;
+    color:#fff;
+    font-weight: 600;
+    outline:none;
+    border-radius: $border-radius;
+    border:1px solid $lightGreyColor;
+    font-size:1.2rem;
+    padding:1rem;
+    transition:250ms;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $secondaryColor;
+    }
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color:#000;
+
+    &:hover {
+        background-color: $primaryColor;
+        color:#fff;
+    }
+}
+
+
+.btn-clean {
+    background:none;
+    color:$primaryColor;
+    font-weight: 800;
+    outline:none;
+    border:none;
+    padding:1rem 0;
+    text-align: left;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.options {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:2rem;
+
+    .btn-clean {
+        padding-left:.5rem;
+    }
+}
+
+p {
+    color:$darkGreyColor;
+    font-weight: 600;
+}
+
+// Respnosive
+
+@media (min-width:767px) {
+    .container {
+        max-width: 40rem;
+        margin:0 auto;
+    }
+    
+    form {
+        max-width: 30rem;
+        margin:2rem auto;
+    }
+
+    .box {
+        width: 37% !important;
+    }
+
+    // .log-box {
+    //      width: 100% !important;
+    // }  
+}
+
+@media (min-width:1023px) {
+    .container {
+        max-width: 50rem;
+        margin:0 auto;
+    }
+    
+  header {
+
+    .desktop-nav {
+        display:flex;
+        visibility: visible;
+        opacity: 1;
+    }
+  }
+  nav {
+
+    li {
+    
+        a {
+            font-size:1rem;
+        }
+       }
+    }
+  
+    .container-flex {
+      display:none;
+    }
+
+}
+
+@media (min-width:1439px) {
+
+    .container {
+        max-width: 60rem;
+    }
+  
+    .box {
+        width: 25% !important;
+    }
+  }
