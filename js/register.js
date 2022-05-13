@@ -7,8 +7,14 @@ form.addEventListener('submit', e => {
   const name = e.target.elements.name.value.trim()
   const email = e.target.elements.email.value.trim()
   const password = e.target.elements.password.value.trim()
+  const confirmPassword = e.target.elements.confirmPassword.value.trim()
 
-  registerUser({ name, email, password })
+  if (password !== confirmPassword) {
+    alert(`Password doesn't match.`)
+  }
+  if (password === confirmPassword) {
+    registerUser({ name, email, password })
+  }
 })
 
 const registerUser = async userData => {
