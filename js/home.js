@@ -4,6 +4,7 @@ const boxes = document.querySelector('.boxes')
 const h2 = document.querySelector('.boxes h2')
 const logOutBtns = document.querySelectorAll('.logOutBtn')
 const search = document.getElementById('search')
+const filter = document.querySelector('.filter')
 
 logOutBtns.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -28,9 +29,10 @@ const getAllPets = async () => {
       const notArchivedPets = data.filter(pet => {
         return pet.archived === 0
       })
-
+      console.log(notArchivedPets)
       if (notArchivedPets.length > 0) {
         displayPets(notArchivedPets)
+        filter.classList.remove('hide')
       } else {
         boxes.innerHTML = `<h2>No pets on the list.</h2>`
       }

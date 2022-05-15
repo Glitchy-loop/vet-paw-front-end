@@ -381,6 +381,10 @@ p {
   font-weight: 600;
 }
 
+.hide {
+  display: none;
+}
+
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
