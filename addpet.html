@@ -64,16 +64,24 @@
       <p>Fill in details about the pet.</p>
       <form name="addPetForm">
         <label for="name">Pet name</label>
-        <input type="text" name="name" id="name" placeholder="Name" />
-        <label for="clientEmail">Client email</label>
+        <input type="text" name="name" id="name" placeholder="Name" required />
+        <label for="clientEmail">Owner's email</label>
         <input
           type="email"
           name="clientEmail"
           id="clientEmail"
-          placeholder="Owner email"
+          placeholder="Owner's email"
+          required
         />
         <label for="age">How old is your pet?</label>
-        <input type="number" name="age" min="1" max="100" placeholder="Age" />
+        <input
+          type="number"
+          name="age"
+          min="1"
+          max="100"
+          placeholder="Age"
+          required
+        />
         <input class="btn-primary" type="submit" value="Add pet" />
       </form>
     </div>

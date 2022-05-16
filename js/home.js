@@ -33,11 +33,10 @@ const getAllPets = async () => {
       if (notArchivedPets.length > 0) {
         displayPets(notArchivedPets)
         filter.classList.remove('hide')
-      } else {
-        boxes.innerHTML = `<h2>No pets on the list.</h2>`
       }
     }
   } catch (err) {
+    boxes.innerHTML = `<h2>No pets on the list.</h2>`
     alert(err || 'Failed to fetch.')
   }
 }
