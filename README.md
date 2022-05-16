@@ -4,7 +4,7 @@
   <h1>Vet-Paw application front-end</h1>
   
   <p>
-    This is a front-end part of the Vet-Paw application.
+   This a front-end part of a simple veterinary application. Register to the application, add, delete Pet in a database, add/remove prescription and medications for the pet.
   </p>
   
 <br />
