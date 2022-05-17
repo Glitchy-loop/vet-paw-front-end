@@ -36,7 +36,7 @@ const loginUser = async userData => {
     if (data.msg === 'User successfully logged in') {
       localStorage.setItem('token', data.token)
       localStorage.setItem('accountName', data.data[0].name)
-      location.replace('/home.html')
+      location.replace('../views/home.html')
     }
   } catch (err) {
     alert(err || 'Server problem')

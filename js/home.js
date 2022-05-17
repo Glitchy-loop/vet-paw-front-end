@@ -11,12 +11,12 @@ logOutBtns.forEach(btn => {
     localStorage.removeItem('token')
     localStorage.removeItem('accountEmail')
     localStorage.removeItem('accountName')
-    location.replace('index.html')
+    location.replace('../index.html')
   })
 })
 
 if (!token) {
-  location.replace('index.html')
+  location.replace('../index.html')
 }
 
 // Get all pets from the database

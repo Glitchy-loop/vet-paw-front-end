@@ -37,7 +37,7 @@
         </div>
         <div class="container-flex">
           <i id="hamburger" class="fa-solid fa-bars"></i>
-          <a class="logOutBtn"
+          <a id="logOutBtn" class="btn-clean"
             ><i class="fa-solid fa-arrow-right-from-bracket"></i
           ></a>
         </div>
@@ -60,29 +60,34 @@
     </header>
     <!-- Content -->
     <div class="container">
-      <h1>Add prescription</h1>
-      <p>Fill in prescription details for <span id="dogName"></span>.</p>
-      <form name="addprescription">
-        <label for="comment">Comment about prescription</label>
+      <h2>Add a pet.</h2>
+      <p>Fill in details about the pet.</p>
+      <form name="addPetForm" enctype="multipart/form-data">
+        <label for="name">Pet name</label>
+        <input type="text" name="name" id="name" placeholder="Name" required />
+        <label for="clientEmail">Owner's email</label>
         <input
-          type="text"
-          name="comment"
-          id="comment"
-          placeholder="Comment"
+          type="email"
+          name="clientEmail"
+          id="clientEmail"
+          placeholder="Owner's email"
           required
         />
-        <label for="select">Select medication for prescription</label>
-        <select name="select" id="select"></select>
+        <label for="age">How old is the pet?</label>
         <input
-          type="submit"
-          value="Add prescription"
-          class="btn-primary"
+          type="number"
+          id="age"
+          name="age"
+          min="1"
+          max="100"
+          placeholder="Age"
           required
         />
+        <input class="btn-primary" type="submit" value="Add pet" />
       </form>
     </div>
     <!-- JS -->
-    <script src="./js/hamburger.js"></script>
-    <script src="./js/addprescription.js"></script>
+    <script src="../js/hamburger.js"></script>
+    <script src="../js/addpet.js"></script>
   </body>
 </html>

@@ -36,11 +36,9 @@
           <div class="logo-title">Vet<span>Paw</span></div>
         </div>
         <div class="container-flex">
-          <i id="hamburger" class="fa-solid fa-bars"></i>
-          <a class="logOutBtn"
-            ><i class="fa-solid fa-arrow-right-from-bracket"></i
-          ></a>
-        </div>
+        <i id="hamburger" class="fa-solid fa-bars"></i>
+        <a class="logOutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+      </div>
         <!-- Desktop nav -->
         <nav class="desktop-nav">
           <li><a href="home.html">Pets</a></li>
@@ -60,38 +58,23 @@
     </header>
     <!-- Content -->
     <div class="container">
-      <h1>Add medication</h1>
-      <p>Fill in details</p>
-      <form name="addMedication">
-        <label for="title">Medication title</label>
-        <input
-          type="text"
-          name="title"
-          id="title"
-          placeholder="Title"
-          required
-        />
-        <label for="description">Medication description</label>
-        <input
-          type="text"
-          name="description"
-          id="description"
-          placeholder="Description"
-        />
-        <label for="price">Medication price</label>
-        <input
-          type="number"
-          name="price"
-          id="price"
-          step="0.01"
-          placeholder="Price"
-          required
-        />
-        <input class="btn-primary" type="submit" value="Add medication" />
-      </form>
+      <section>
+        <h1>Medications</h1>
+        <button
+          onclick="window.location='addmedication.html'"
+          type="button"
+          class="btn-primary"
+        >
+          Add medication
+        </button>
+      </section>
+      <h2></h2>
+      <div class="boxes">            
+          </div>
+      </div>
     </div>
     <!-- JS -->
-    <script src="./js/hamburger.js"></script>
-    <script src="./js/addmedication.js"></script>
+    <script src="../js/hamburger.js"></script>
+    <script src="../js/medications.js"></script>
   </body>
 </html>

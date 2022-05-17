@@ -36,9 +36,11 @@
           <div class="logo-title">Vet<span>Paw</span></div>
         </div>
         <div class="container-flex">
-        <i id="hamburger" class="fa-solid fa-bars"></i>
-        <a class="logOutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-      </div>
+          <i id="hamburger" class="fa-solid fa-bars"></i>
+          <a class="logOutBtn"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i
+          ></a>
+        </div>
         <!-- Desktop nav -->
         <nav class="desktop-nav">
           <li><a href="home.html">Pets</a></li>
@@ -58,23 +60,29 @@
     </header>
     <!-- Content -->
     <div class="container">
-      <section>
-        <h1>Medications</h1>
-        <button
-          onclick="window.location='addmedication.html'"
-          type="button"
+      <h1>Add prescription</h1>
+      <p>Fill in prescription details for <span id="dogName"></span>.</p>
+      <form name="addprescription">
+        <label for="comment">Comment about prescription</label>
+        <input
+          type="text"
+          name="comment"
+          id="comment"
+          placeholder="Comment"
+          required
+        />
+        <label for="select">Select medication for prescription</label>
+        <select name="select" id="select"></select>
+        <input
+          type="submit"
+          value="Add prescription"
           class="btn-primary"
-        >
-          Add medication
-        </button>
-      </section>
-      <h2></h2>
-      <div class="boxes">            
-          </div>
-      </div>
+          required
+        />
+      </form>
     </div>
     <!-- JS -->
-    <script src="./js/hamburger.js"></script>
-    <script src="./js/medications.js"></script>
+    <script src="../js/hamburger.js"></script>
+    <script src="../js/addprescription.js"></script>
   </body>
 </html>

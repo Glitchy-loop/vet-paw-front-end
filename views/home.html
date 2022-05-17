@@ -31,59 +31,53 @@
     <!-- Header -->
     <header>
       <div class="container">
-        <div onclick="window.location='index.html'" class="logo">
+        <div onclick="window.location='home.html'" class="logo">
           <img src="/assets/images/logoCircled.png" alt="VetPaw" />
           <div class="logo-title">Vet<span>Paw</span></div>
         </div>
         <div class="container-flex">
-          <i id="hamburger" class="fa-solid fa-bars"></i>
-        </div>
+        <i id="hamburger" class="fa-solid fa-bars"></i>
+        <a class="logOutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+      </div>
         <!-- Desktop nav -->
         <nav class="desktop-nav">
-          <li><a href="index.html">Login</a></li>
-          <li><a href="register.html">Register</a></li>
+          <li><a href="home.html">Pets</a></li>
+          <li><a href="medications.html">Medications</a></li>
+          <li><a href="changepassword.html">Change password</a></li>
+          <li><a type="button" class="logOutBtn btn-clean">Log Out</a></li>
         </nav>
       </div>
       <div class="container">
         <!-- Mobile nav -->
         <nav class="mobile-nav">
-          <li><a href="index.html">Login</a></li>
-          <li><a href="register.html">Register</a></li>
+          <li><a href="home.html">Pets</a></li>
+          <li><a href="medications.html">Medications</a></li>
+          <li><a href="changepassword.html">Change password</a></li>
         </nav>
       </div>
     </header>
     <!-- Content -->
     <div class="container">
-      <form name="resetpassword">
-        <h2>Reset password</h2>
-        <p>
-          Enter your email. If provided email exist in the database, you will
-          receive a new password.
-        </p>
-        <label for="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          required
-          placeholder="Email"
-        />
-        <input class="btn-primary" type="submit" value="Reset password" />
-      </form>
-      <div class="options">
-        <p>Back to login page</p>
+      <section>
+        <h1>Pet List</h1>
         <button
+          onclick="window.location='addpet.html'"
           type="button"
-          class="btn-clean goBack"
-          onclick="window.location='./index.html'"
+          class="btn-primary"
         >
-          Login
-          <i class="fa-solid fa-rotate-left"></i>
+          Add pet
         </button>
+      </section>
+      <!-- Search -->
+      <div class="filter hide">
+      <input type="search" name="search" id="search" placeholder="Enter a name of the pet">
+    </div>
+      <div class="boxes">            
+          </div>
       </div>
     </div>
     <!-- JS -->
-    <script src="./js/hamburger.js"></script>
-    <script src="./js/resetpassword.js"></script>
+    <script src="../js/hamburger.js"></script>
+    <script src="../js/home.js"></script>
   </body>
 </html>

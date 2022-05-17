@@ -31,63 +31,70 @@
     <!-- Header -->
     <header>
       <div class="container">
-        <div onclick="window.location='home.html'" class="logo">
+        <div onclick="window.location='../index.html'" class="logo">
           <img src="/assets/images/logoCircled.png" alt="VetPaw" />
           <div class="logo-title">Vet<span>Paw</span></div>
         </div>
         <div class="container-flex">
           <i id="hamburger" class="fa-solid fa-bars"></i>
-          <a class="logOutBtn"
-            ><i class="fa-solid fa-arrow-right-from-bracket"></i
-          ></a>
         </div>
         <!-- Desktop nav -->
         <nav class="desktop-nav">
-          <li><a href="home.html">Pets</a></li>
-          <li><a href="medications.html">Medications</a></li>
-          <li><a href="changepassword.html">Change password</a></li>
-          <li><a type="button" class="logOutBtn btn-clean">Log Out</a></li>
+          <li><a href="../index.html">Login</a></li>
         </nav>
       </div>
       <div class="container">
         <!-- Mobile nav -->
         <nav class="mobile-nav">
-          <li><a href="home.html">Pets</a></li>
-          <li><a href="medications.html">Medications</a></li>
-          <li><a href="changepassword.html">Change password</a></li>
+          <li><a href="../index.html">Login</a></li>
         </nav>
       </div>
     </header>
     <!-- Content -->
     <div class="container">
-      <section>
-        <h1>Logs</h1>
-        <div class="options">
-          <button
-            onclick="window.location='addprescription.html'"
-            class="btn-primary"
-          >
-            Add prescription
-          </button>
-          <button onclick="window.location='addlog.html'" class="btn-primary">
-            Add log
-          </button>
-        </div>
-      </section>
-      <section>
-        <div class="options">
-          <button id="filterLogs" class="btn-secondary">Logs</button>
-          <button id="filterPrescriptions" class="btn-secondary">
-            Prescriptions
-          </button>
-        </div>
-      </section>
-      <h2></h2>
-      <p></p>
-      <div class="boxes logs">No logs found...</div>
+      <form name="registerForm">
+        <h2>Register a new account</h2>
+        <p>Fill in your details.</p>
+        <label for="name">First Name</label>
+        <input type="text" name="name" id="name" placeholder="First name" />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Email"
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+        <label for="confirmPassword">Confirm password</label>
+        <input
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          placeholder="Confirm password"
+        />
+        <input class="btn-primary" type="submit" value="Register" />
+      </form>
+      <div class="options">
+        <p>Already have an account?</p>
+        <button
+          type="button"
+          class="btn-clean goBack"
+          onclick="window.location='../index.html'"
+        >
+          Login
+          <i class="fa-solid fa-rotate-left"></i>
+        </button>
+      </div>
     </div>
     <!-- JS -->
-    <script src="./js/hamburger.js"></script>
-    <script src="./js/logs.js"></script>
+    <script src="../js/hamburger.js"></script>
+    <script src="../js/register.js"></script>
   </body>
 </html>

@@ -60,38 +60,29 @@
     </header>
     <!-- Content -->
     <div class="container">
-      <form name="changePassword">
-        <h2>Change password</h2>
-        <p>Fill in details.</p>
-        <label for="email">Email</label>
+      <h1>Add a log</h1>
+      <p>Fill in form details.</p>
+      <form name="addlog">
+        <label for="description">Symptoms, injury or illness description</label>
         <input
-          type="email"
-          name="email"
-          id="email"
-          required
-          placeholder="Email"
+          type="text"
+          name="description"
+          id="description"
+          placeholder="Description"
         />
-        <label for="oldpass">Old password</label>
+        <label for="status">Status (recovering, healthy, injured...)</label>
         <input
-          type="password"
-          name="oldpass"
-          id="oldpass"
+          type="text"
+          name="status"
+          id="status"
+          placeholder="Status"
           required
-          placeholder="Old password"
         />
-        <label for="newpassword">New password</label>
-        <input
-          type="password"
-          name="newpass"
-          id="newpass"
-          required
-          placeholder="New password"
-        />
-        <input class="btn-primary" type="submit" value="Change password" />
+        <input type="submit" value="Add log" class="btn-primary" required />
       </form>
     </div>
     <!-- JS -->
-    <script src="./js/hamburger.js"></script>
-    <script src="./js/changepassword.js"></script>
+    <script src="../js/hamburger.js"></script>
+    <script src="../js/addlog.js"></script>
   </body>
 </html>

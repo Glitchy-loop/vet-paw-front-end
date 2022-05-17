@@ -60,29 +60,34 @@
     </header>
     <!-- Content -->
     <div class="container">
-      <h1>Add a log</h1>
-      <p>Fill in form details.</p>
-      <form name="addlog">
-        <label for="description">Symptoms, injury or illness description</label>
-        <input
-          type="text"
-          name="description"
-          id="description"
-          placeholder="Description"
-        />
-        <label for="status">Status (recovering, healthy, injured...)</label>
-        <input
-          type="text"
-          name="status"
-          id="status"
-          placeholder="Status"
-          required
-        />
-        <input type="submit" value="Add log" class="btn-primary" required />
-      </form>
+      <section>
+        <h1>Logs</h1>
+        <div class="options">
+          <button onclick="window.location='addlog.html'" class="btn-primary">
+            Add log
+          </button>
+          <button
+            onclick="window.location='addprescription.html'"
+            class="btn-primary"
+          >
+            Add prescription
+          </button>
+        </div>
+      </section>
+      <section>
+        <div class="options">
+          <button id="filterLogs" class="btn-secondary">Logs</button>
+          <button id="filterPrescriptions" class="btn-secondary">
+            Prescriptions
+          </button>
+        </div>
+      </section>
+      <h2></h2>
+      <p></p>
+      <div class="boxes logs">No logs found...</div>
     </div>
     <!-- JS -->
-    <script src="./js/hamburger.js"></script>
-    <script src="./js/addlog.js"></script>
+    <script src="../js/hamburger.js"></script>
+    <script src="../js/logs.js"></script>
   </body>
 </html>
