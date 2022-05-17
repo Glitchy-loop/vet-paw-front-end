@@ -1,0 +1,51 @@
+// Buttons
+.btn-primary, .btn-secondary {
+    background-color: $primaryColor;
+    color:#fff;
+    font-weight: 600;
+    outline:none;
+    border-radius: $border-radius;
+    border:1px solid $lightGreyColor;
+    font-size:1.2rem;
+    padding:1rem;
+    transition:250ms;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $secondaryColor;
+    }
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color:#000;
+
+    &:hover {
+        background-color: $primaryColor;
+        color:#fff;
+    }
+}
+
+.btn-clean {
+    background:none;
+    color:$primaryColor;
+    font-weight: 800;
+    outline:none;
+    border:none;
+    padding:1rem 0;
+    text-align: left;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.options {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn-clean {
+        padding-left:.5rem;
+    }
+}

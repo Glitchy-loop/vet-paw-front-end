@@ -1,12 +1,4 @@
 @charset "UTF-8";
-body {
-  font-family: 'Quicksand', sans-serif;
-}
-
-h1, h2, p {
-  text-align: center;
-}
-
 header {
   -webkit-box-shadow: 0px 0px 8px -2px #c5c5c5;
           box-shadow: 0px 0px 8px -2px #c5c5c5;
@@ -74,51 +66,6 @@ header .container i:hover {
   cursor: pointer;
 }
 
-.container {
-  margin: 0 2rem;
-}
-
-.container img {
-  width: 5rem;
-  margin: 0 auto;
-  -webkit-transition: 250ms;
-  transition: 250ms;
-}
-
-.container-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.container-flex .fa-arrow-right-from-bracket {
-  margin-left: 2rem;
-  color: #888888;
-}
-
-.container h2 span {
-  color: #7e56da;
-}
-
-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 1rem;
-}
-
 nav.visible {
   max-height: 15rem;
   opacity: 1;
@@ -148,6 +95,16 @@ nav li a {
 
 .logOutBtn {
   color: #888888 !important;
+}
+
+.goBack i {
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.goBack:hover i {
+  -webkit-transform: rotateZ(-360deg);
+          transform: rotateZ(-360deg);
 }
 
 form {
@@ -199,34 +156,49 @@ form input[type="submit"] {
   margin-top: 2rem;
 }
 
-.filter {
+.container {
+  margin: 0 2rem;
+}
+
+.container img {
+  width: 5rem;
+  margin: 0 auto;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.container-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.filter #search {
-  width: 60%;
-  margin: 0 auto;
-  font-size: 1.2rem;
-  padding: .5rem;
-  border-radius: 0.4rem;
-  outline: none;
-  border: 2px solid #c5c5c5;
-  -webkit-transition: 250ms;
-  transition: 250ms;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.container-flex .fa-arrow-right-from-bracket {
+  margin-left: 2rem;
+  color: #888888;
 }
 
-.goBack i {
-  -webkit-transition: 500ms;
-  transition: 500ms;
+.container h2 span {
+  color: #7e56da;
 }
 
-.goBack:hover i {
-  -webkit-transform: rotateZ(-360deg);
-          transform: rotateZ(-360deg);
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
 }
 
 .boxes {
@@ -387,16 +359,43 @@ form input[type="submit"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 2rem;
 }
 
 .options .btn-clean {
   padding-left: .5rem;
 }
 
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
 p {
   color: #888888;
   font-weight: 600;
+}
+
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.filter #search {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  padding: .5rem;
+  border-radius: 0.4rem;
+  outline: none;
+  border: 2px solid #c5c5c5;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .hide {

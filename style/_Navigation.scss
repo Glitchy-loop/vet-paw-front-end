@@ -1,0 +1,44 @@
+// Navigation
+nav.visible {
+    max-height: 15rem;
+    opacity:1;
+    visibility: visible;
+  }
+  
+  nav {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition:max-height 500ms, opacity 250ms, visibility 1s;
+  
+      li {
+          list-style: none;
+          padding:.5rem 0;
+          font-weight: 800;
+  
+          a {
+              text-decoration: none;
+              color:$primaryColor;
+              font-size:1.2rem;
+              text-transform: uppercase;
+          }
+      }
+  }
+  
+  .logOutBtn {
+      color:$darkGreyColor !important;
+  }
+  
+  .goBack {
+
+    i {
+        transition:500ms;
+    }
+
+    &:hover {
+
+        i {
+            transform: rotateZ(-360deg);
+        }
+    }
+}
