@@ -1,14 +1,14 @@
 // Buttons
 .btn-primary, .btn-secondary {
     background-color: $primaryColor;
-    color:#fff;
+    color: #fff;
     font-weight: 600;
-    outline:none;
+    outline: none;
     border-radius: $border-radius;
-    border:1px solid $lightGreyColor;
-    font-size:1.2rem;
-    padding:1rem;
-    transition:250ms;
+    border: 1px solid $lightGreyColor;
+    font-size: 1.2rem;
+    padding: 1rem;
+    transition: 250ms;
 
     &:hover {
         cursor: pointer;
@@ -18,7 +18,7 @@
 
 .btn-secondary {
     background-color: #fff;
-    color:#000;
+    color: #000;
 
     &:hover {
         background-color: $primaryColor;
@@ -27,12 +27,12 @@
 }
 
 .btn-clean {
-    background:none;
-    color:$primaryColor;
+    background: none;
+    color: $primaryColor;
     font-weight: 800;
-    outline:none;
-    border:none;
-    padding:1rem 0;
+    outline: none;
+    border: none;
+    padding: 1rem 0;
     text-align: left;
 
     &:hover {
@@ -41,11 +41,11 @@
 }
 
 .options {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 
     .btn-clean {
-        padding-left:.5rem;
+        padding-left: .5rem;
     }
 }

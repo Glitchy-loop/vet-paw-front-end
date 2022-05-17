@@ -3,22 +3,22 @@ header {
     box-shadow: $box-shadow;
 
     .desktop-nav {
-        display:none;
+        display: none;
         align-items: center;
 
         li {
-            padding-left:1rem;
+            padding-left: 1rem;
         }
     }
 
     .container {
-        display:flex;
+        display: flex;
         justify-content: space-between;
         align-items: center;
         height: auto;
 
         .logo {
-            display:flex;
+            display: flex;
             align-items: center;
             padding:2rem 0;
 
@@ -32,19 +32,19 @@ header {
 
             .logo-title {
                 font-size: 1.5rem;
-                color:#000;
+                color: #000;
                 font-weight: 600;
-                margin-left:.3rem;
+                margin-left: .3rem;
 
                 span {
-                    font-weight:800;
-                    color:$primaryColor;
+                    font-weight: 800;
+                    color: $primaryColor;
                 }
             }
         }
 
         i {
-            font-size:1.5rem;
+            font-size: 1.5rem;
 
             &:hover {
                 cursor: pointer;

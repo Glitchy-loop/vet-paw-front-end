@@ -1,25 +1,25 @@
 // Forms
 form {
-    display:flex;
+    display: flex;
     flex-direction: column;
     max-width: 20rem;
-    margin:2rem auto;
-    animation:fadein 500ms;
+    margin: 2rem auto;
+    animation: fadein 500ms;
 
     input:not(input[type="submit"]), label, select {
         width: 100%;
-        margin:0 auto;
-        margin-top:.5rem;
-        font-size:1.2rem;
-        margin-top:1rem;
+        margin: 0 auto;
+        margin-top: .5rem;
+        font-size: 1.2rem;
+        margin-top: 1rem;
     }
 
     input:not(input[type="submit"]), select {
-        padding:.5rem;
+        padding: .5rem;
         border-radius: $border-radius;
-        outline:none;
-        border:2px solid $lightGreyColor;
-        transition:250ms;
+        outline: none;
+        border: 2px solid $lightGreyColor;
+        transition: 250ms;
         box-sizing: border-box;
 
         &:focus {
@@ -36,6 +36,6 @@ form {
     }
 
     input[type="submit"] {
-        margin-top:2rem;
+        margin-top: 2rem;
     }
 }
