@@ -23,7 +23,8 @@ form.addEventListener('submit', e => {
   const name = e.target.elements.name.value.trim()
   const clientEmail = e.target.elements.clientEmail.value.trim()
   const age = e.target.elements.age.value.trim()
-  const details = { name, age, clientEmail }
+
+  const details = { name, clientEmail, age }
 
   addPet(details)
 })
@@ -34,11 +35,13 @@ const addPet = async petDetails => {
     const res = await fetch(`${baseUrl}/pets/add_pet`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${token}`
       },
       body: JSON.stringify(petDetails)
     })
     const data = await res.json()
+    console.log(data)
 
     if (data.msg === 'Successfully added a pet.') {
       location.replace('home.html')

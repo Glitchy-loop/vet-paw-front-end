@@ -26,17 +26,17 @@ const loginUser = async userData => {
     if (data.err) {
       alert(data.err)
     }
-
-    if (data.msg === 'User successfully logged in') {
-      localStorage.setItem('token', data.token)
-      localStorage.setItem('accountName', data.data[0].name)
-      location.replace('/home.html')
-    }
     if (data.msg === 'Incorrect password.') {
       alert('Incorrect password. Try again')
     }
     if (data.msg === 'User not found.') {
       alert('User not found.')
+    }
+
+    if (data.msg === 'User successfully logged in') {
+      localStorage.setItem('token', data.token)
+      localStorage.setItem('accountName', data.data[0].name)
+      location.replace('/home.html')
     }
   } catch (err) {
     alert(err || 'Server problem')

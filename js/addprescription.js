@@ -57,7 +57,6 @@ form.addEventListener('submit', e => {
   const comment = e.target.elements.comment.value.trim()
   const medication_id = Number(e.target.select[select.selectedIndex].id)
   const pet_id = Number(localStorage.getItem('petId'))
-  console.log({ comment, medication_id, pet_id })
 
   addPrescription({ comment, medication_id, pet_id })
 })

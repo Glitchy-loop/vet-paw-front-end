@@ -29,7 +29,7 @@ const getAllPets = async () => {
       const notArchivedPets = data.filter(pet => {
         return pet.archived === 0
       })
-      console.log(notArchivedPets)
+      // console.log(notArchivedPets)
       if (notArchivedPets.length > 0) {
         displayPets(notArchivedPets)
         filter.classList.remove('hide')

@@ -271,11 +271,11 @@ form input[type="submit"] {
   margin: 0 .1rem;
 }
 
-.boxes .box .pet-name, .boxes .box .pet-age, .boxes .box .pet-owner, .boxes .box .injure-description, .boxes .box .status, .boxes .box .med-title, .boxes .box .med-description, .boxes .box .med-price {
+.boxes .box .pet-name, .boxes .box .pet-age, .boxes .box .pet-owner, .boxes .box .injure-description, .boxes .box .status, .boxes .box .med-title, .boxes .box .med-description, .boxes .box .med-price, .boxes .box .comment, .boxes .box .medication {
   padding: 1rem 0;
 }
 
-.boxes .box .pet-name::before, .boxes .box .pet-age::before, .boxes .box .pet-owner::before, .boxes .box .injure-description::before, .boxes .box .status::before, .boxes .box .med-title::before, .boxes .box .med-description::before, .boxes .box .med-price::before {
+.boxes .box .pet-name::before, .boxes .box .pet-age::before, .boxes .box .pet-owner::before, .boxes .box .injure-description::before, .boxes .box .status::before, .boxes .box .med-title::before, .boxes .box .med-description::before, .boxes .box .med-price::before, .boxes .box .comment::before, .boxes .box .medication::before {
   font-weight: 600;
   color: #7e56da;
   margin-right: .5rem;
@@ -313,8 +313,20 @@ form input[type="submit"] {
   content: 'Price:';
 }
 
+.boxes .box .comment::before {
+  content: 'Comment:';
+}
+
+.boxes .box .medication::before {
+  content: 'Prescribed:';
+}
+
 .boxes .box .med-price::after {
   content: '€';
+}
+
+.prescription {
+  background-color: #f7f4ff;
 }
 
 .btn-primary, .btn-secondary {

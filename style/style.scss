@@ -240,11 +240,11 @@ form {
             }
         }
 
-        .pet-name, .pet-age, .pet-owner, .injure-description, .status, .med-title, .med-description, .med-price {
+        .pet-name, .pet-age, .pet-owner, .injure-description, .status, .med-title, .med-description, .med-price, .comment, .medication {
             padding:1rem 0;
         }
 
-        .pet-name::before, .pet-age::before, .pet-owner::before, .injure-description::before, .status::before, .med-title::before, .med-description::before, .med-price::before  {
+        .pet-name::before, .pet-age::before, .pet-owner::before, .injure-description::before, .status::before, .med-title::before, .med-description::before, .med-price::before, .comment::before, .medication::before  {
             font-weight: 600;
             color:$primaryColor;
             margin-right:.5rem;
@@ -282,10 +282,23 @@ form {
             content:'Price:';
         }
 
+        .comment::before {
+            content:'Comment:';
+        }
+        
+        .medication::before {
+            content:'Prescribed:';
+        }
+
         .med-price::after {
             content:'€';
         }
+
     }
+}
+
+.prescription {
+    background-color: #f7f4ff;
 }
 
 // Buttons
