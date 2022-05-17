@@ -47,6 +47,7 @@
 
 - User authentication - registration, login, forget password, reset password.
 - Add remove pets from the database through front-end.
+- Add prescriptions logs for the particular pet.
 - Search query by pet name.
 
 
@@ -57,7 +58,9 @@
 ### :running: Run Locally
 
 Start the app locally
+  
+  `(Make sure back-end and strapi servers are running in the background for the app to work correctly.)`
 
 ```bash
-  Just use live server to start app locally.
+  Use live server to start app locally (index.html).
 ```
