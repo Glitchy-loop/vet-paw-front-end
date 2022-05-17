@@ -47,7 +47,7 @@
 
 - User authentication - registration, login, forget password, reset password.
 - Add remove pets from the database through front-end.
-- Search query by pet's name.
+- Search query by pet name.
 
 
 <!-- Getting Started -->
