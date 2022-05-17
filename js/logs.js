@@ -115,18 +115,6 @@ const displayPrescriptions = data => {
     const box = document.createElement('div')
     box.className = 'box prescription'
 
-    const name = document.createElement('div')
-    name.className = 'pet-name'
-    name.textContent = prescription.name
-
-    const age = document.createElement('div')
-    age.className = 'pet-age'
-    age.textContent = prescription.age
-
-    const owner = document.createElement('div')
-    owner.className = 'pet-owner'
-    owner.textContent = prescription.clientEmail
-
     const comment = document.createElement('div')
     comment.className = 'comment'
     comment.textContent = prescription.comment
@@ -139,7 +127,7 @@ const displayPrescriptions = data => {
     date.className = 'date'
     date.textContent = prescription.timestamp
 
-    box.append(name, age, owner, comment, medication, date)
+    box.append(comment, medication, date)
 
     boxes.append(box)
   })
