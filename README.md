@@ -60,5 +60,5 @@
 Start the app locally
 
 ```bash
-  Just use live server to start app locally.
+  Use live server to start app locally (index.html).
 ```
