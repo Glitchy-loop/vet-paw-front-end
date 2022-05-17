@@ -325,6 +325,12 @@ form input[type="submit"] {
   content: '€';
 }
 
+.boxes .box .date {
+  padding: 1rem 0;
+  color: #888888;
+  font-style: italic;
+}
+
 .prescription {
   background-color: #f7f4ff;
 }

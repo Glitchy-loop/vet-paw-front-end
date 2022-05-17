@@ -125,12 +125,22 @@ const displayPrescriptions = data => {
 
     const date = document.createElement('div')
     date.className = 'date'
-    date.textContent = prescription.timestamp
+    date.textContent = getISOStringWithoutSecsAndMillisecs1(
+      new Date(prescription.timestamp)
+    )
 
     box.append(comment, medication, date)
 
     boxes.append(box)
   })
+}
+
+// Convert time
+const getISOStringWithoutSecsAndMillisecs1 = date => {
+  const dateAndTime = date.toISOString().split('T')
+  const time = dateAndTime[1].split(':')
+
+  return dateAndTime[0] + ' ' + time[0] + ':' + time[1]
 }
 
 // Get all prescriptions associated with this pet by ID

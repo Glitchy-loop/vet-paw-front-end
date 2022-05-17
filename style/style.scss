@@ -294,6 +294,12 @@ form {
             content:'€';
         }
 
+        .date {
+            padding:1rem 0;
+            color:$darkGreyColor;
+            font-style: italic;
+        }
+
     }
 }
 
