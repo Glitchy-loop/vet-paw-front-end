@@ -17,31 +17,31 @@ if (!token) {
   location.replace('../index.html')
 }
 
-// Add pet form
-form.addEventListener('submit', e => {
+// Add pet form handler
+const handleForm = e => {
   e.preventDefault()
-  const name = e.target.elements.name.value.trim()
-  const clientEmail = e.target.elements.clientEmail.value.trim()
-  const age = e.target.elements.age.value.trim()
 
-  const details = { name, clientEmail, age }
+  let form = e.target
+  fd = new FormData(form)
 
-  addPet(details)
-})
+  let url = `${baseUrl}/pets/add_pet`
+  let req = new Request(url, {
+    method: 'POST',
+    headers: { authorization: `Bearer ${token}` },
+    body: fd
+  })
+
+  addPet(req)
+}
+
+// Add pet form
+form.addEventListener('submit', handleForm)
 
 // Add pet in the database
-const addPet = async petDetails => {
+const addPet = async req => {
   try {
-    const res = await fetch(`${baseUrl}/pets/add_pet`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        authorization: `Bearer ${token}`
-      },
-      body: JSON.stringify(petDetails)
-    })
+    const res = await fetch(req)
     const data = await res.json()
-    console.log(data)
 
     if (data.msg === 'Successfully added a pet.') {
       location.replace('home.html')

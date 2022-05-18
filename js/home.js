@@ -44,7 +44,7 @@ const getAllPets = async () => {
 getAllPets()
 
 // Display pets on the page
-const displayPets = data => {
+const displayPets = async data => {
   boxes.innerHTML = ``
 
   data.forEach(pet => {
@@ -75,9 +75,17 @@ const displayPets = data => {
     deleteBtn.className = 'btn-secondary deleteBtns'
     deleteBtn.textContent = 'Delete'
 
+    const petImg = document.createElement('div')
+    petImg.className = 'pet-image'
+
+    const img = document.createElement('img')
+    img.src = `${baseUrl}/pets/img/${pet.img}`
+
+    petImg.append(img)
+
     buttons.append(logBtn, deleteBtn)
 
-    box.append(title, age, owner, buttons)
+    box.append(petImg, title, age, owner, buttons)
 
     boxes.append(box)
   })
@@ -88,7 +96,8 @@ const displayPets = data => {
   logBtns.forEach(btn => {
     btn.addEventListener('click', e => {
       const petId = Number(e.target.parentElement.parentElement.id)
-      const petName = e.target.parentElement.parentElement.children[0].textContent.trim()
+      const petName = e.target.parentElement.parentElement.children[1].textContent.trim()
+
       localStorage.setItem('petName', petName)
       localStorage.setItem('petId', petId)
       location.replace(`logs.html?id=${petId}`)
