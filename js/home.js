@@ -109,8 +109,8 @@ const displayPets = async data => {
 
   deleteBtns.forEach(btn => {
     btn.addEventListener('click', e => {
-      const name = e.target.parentElement.parentElement.children[0].textContent.trim()
-      const clientEmail = e.target.parentElement.parentElement.children[2].textContent.trim()
+      const name = e.target.parentElement.parentElement.children[1].textContent.trim()
+      const clientEmail = e.target.parentElement.parentElement.children[3].textContent.trim()
       const id = Number(e.target.parentElement.parentElement.id)
 
       deletePet({ name, clientEmail, id })
