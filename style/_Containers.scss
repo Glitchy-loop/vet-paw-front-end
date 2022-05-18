@@ -43,7 +43,7 @@ section {
         font-size: 1.2rem;
         text-align: center;
         margin: 1rem .5rem;
-        word-break: break-all;
+        // word-break: break-all;
         text-align: center;
 
         .pet-buttons {
@@ -71,47 +71,47 @@ section {
         }
 
         .pet-name::before {
-            content:'Name:';
+            content: 'Name:';
         }
 
         .pet-age::before {
-            content:'Age:';
+            content: 'Age:';
         }
 
         .pet-owner::before {
-            content:'Owner:';
+            content: 'Owner:';
         }
 
         .injure-description::before {
-            content:'Description:';
+            content: 'Description:';
         }
 
         .status::before {
-            content:'Status:';
+            content: 'Status:';
         }
 
         .med-title::before {
-            content:'Title:';
+            content: 'Title:';
         }
 
         .med-description::before {
-            content:'Description:';
+            content: 'Description:';
         }
 
         .med-price::before {
-            content:'Price:';
+            content: 'Price:';
         }
 
         .comment::before {
-            content:'Comment:';
+            content: 'Comment:';
         }
         
         .medication::before {
-            content:'Prescribed:';
+            content: 'Prescribed:';
         }
 
         .med-price::after {
-            content:'€';
+            content: '€';
         }
 
         .date {
@@ -124,7 +124,7 @@ section {
 
             img {
                 border-radius: 50%;
-                width:5rem;
+                width: 5rem;
                 margin: 0 auto;
                 transition: 250ms;
             }
