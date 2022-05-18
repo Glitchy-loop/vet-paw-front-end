@@ -21,11 +21,11 @@ if (!token) {
 const handleForm = e => {
   e.preventDefault()
 
-  let form = e.target
-  fd = new FormData(form)
+  const form = e.target
+  const fd = new FormData(form)
 
-  let url = `${baseUrl}/pets/add_pet`
-  let req = new Request(url, {
+  const url = `${baseUrl}/pets/add_pet`
+  const req = new Request(url, {
     method: 'POST',
     headers: { authorization: `Bearer ${token}` },
     body: fd
@@ -45,6 +45,9 @@ const addPet = async req => {
 
     if (data.msg === 'Successfully added a pet.') {
       location.replace('home.html')
+    }
+    if (data.err) {
+      alert(data.err || 'Failed to fetch.')
     }
   } catch (err) {
     alert(err || 'Failed to fetch.')
