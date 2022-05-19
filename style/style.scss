@@ -24,7 +24,7 @@ p {
     display: flex;
 
     #search {
-        width: 60%;
+        width: 100%;
         margin: 0 auto;
         font-size: 1.2rem;
         padding: .5rem;
@@ -67,6 +67,10 @@ p {
 
     .box {
         width: 37% !important;
+    }
+
+    #search {
+        width: 60% !important;
     }
 }
 

@@ -42,7 +42,7 @@ const changePass = async userData => {
     const data = await res.json()
 
     if (data.msg === 'Successfully changed password.') {
-      p.textContent = 'Successfully changed password.'
+      p.innerHTML = `<p style="color:green";>Successfully changed password.</p>`
     }
 
     if (data.err) {
