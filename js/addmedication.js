@@ -48,6 +48,6 @@ const addMedication = async medDetails => {
       p.textContent = 'Something went wrong. Try again later.'
     }
   } catch (err) {
-    alert(err || 'Failed to fetch.')
+    notification(err || 'Failed to fetch.')
   }
 }

@@ -47,9 +47,9 @@ const addPet = async req => {
       location.replace('home.html')
     }
     if (data.err) {
-      alert(data.err || 'Failed to fetch.')
+      notification(data.err || 'Failed to fetch.')
     }
   } catch (err) {
-    alert(err || 'Failed to fetch.')
+    notification(err || 'Failed to fetch.')
   }
 }

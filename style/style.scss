@@ -53,6 +53,37 @@ p {
     }
 }
 
+.notification {
+    opacity:1;
+    transition:250ms;
+    min-width: 60%;
+    min-height: 3rem;
+    box-shadow: $box-shadow;
+    background-color: #ffffffec;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button, p {
+        margin:.8rem;
+    }
+
+    button {
+        padding:.5rem .8rem;
+        margin-bottom:0;
+    }   
+    
+    p {
+        padding:1rem;
+        color:#000;
+    }
+}
+
 // Media queries
 @media (min-width:767px) {
     .container {

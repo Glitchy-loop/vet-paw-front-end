@@ -29,8 +29,12 @@ const getMeds = async () => {
     } else {
       h2.innerHTML = 'No medications found.'
     }
+
+    if (data.err) {
+      notification(data.err || 'Failed to fetch.')
+    }
   } catch (err) {
-    alert(err || 'Failed to fetch.')
+    notification(err || 'Failed to fetch.')
   }
 }
 

@@ -29,7 +29,7 @@ const getAllPets = async () => {
       const notArchivedPets = data.filter(pet => {
         return pet.archived === 0
       })
-      // console.log(notArchivedPets)
+
       if (notArchivedPets.length > 0) {
         displayPets(notArchivedPets)
         filter.classList.remove('hide')
@@ -37,7 +37,7 @@ const getAllPets = async () => {
     }
   } catch (err) {
     boxes.innerHTML = `<h2>No pets on the list.</h2>`
-    alert(err || 'Failed to fetch.')
+    notification(err || 'Failed to fetch.')
   }
 }
 
@@ -138,7 +138,7 @@ const deletePet = async petDetails => {
       h2.textContent = data.err
     }
   } catch (err) {
-    alert(err || 'Failed to fetch.')
+    notification(err || 'Failed to fetch.')
   }
 }
 
@@ -162,6 +162,6 @@ const searchPetsByName = async searchQuery => {
 
     displayPets(data)
   } catch (err) {
-    alert(err || 'Failed to fetch.')
+    notification(err || 'Failed to fetch.')
   }
 }

@@ -46,11 +46,11 @@ const changePass = async userData => {
     }
 
     if (data.err) {
-      p.textContent = data.err
+      notification(data.err)
     }
 
     // console.log(data)
   } catch (err) {
-    alert(err || 'Server problem')
+    notification(err || 'Server problem')
   }
 }

@@ -34,7 +34,7 @@ const getMeds = async () => {
       h2.innerHTML = 'No medications found.'
     }
   } catch (err) {
-    alert(err || 'Failed to fetch.')
+    notification(err || 'Failed to fetch.')
   }
 }
 
@@ -83,6 +83,6 @@ const addPrescription = async prescriptionDetails => {
         data.err || 'Failed to add prescription to the database. Try again.'
     }
   } catch (err) {
-    alert(err || 'Failed to fetch.')
+    notification(err || 'Failed to fetch.')
   }
 }

@@ -43,7 +43,7 @@ const getLog = async () => {
       return displayLogs(data)
     }
   } catch (err) {
-    console.log(err)
+    notification(err)
   }
 }
 window.onload = getLog()
@@ -95,7 +95,7 @@ const getMeds = async () => {
       })
     }
   } catch (err) {
-    console.log(err)
+    notification(err)
   }
 }
 getMeds()
@@ -162,7 +162,7 @@ const getPrescriptions = async () => {
       displayPrescriptions(data)
     }
   } catch (err) {
-    console.log(err)
+    notification(err)
   }
 }
 

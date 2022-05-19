@@ -42,12 +42,16 @@ const addLog = async petDetails => {
     })
     const data = await res.json()
 
+    if (data.err) {
+      notification(data.err || 'Failed to fetch.')
+    }
+
     if (data.msg === 'Successfully added a log.') {
       location.replace(`logs.html?id=${localStorage.getItem('petId')}`)
     } else {
       p.innerHTML = err || 'Something went wrong. Try again later'
     }
   } catch (err) {
-    alert(err || 'Failed to fetch.')
+    notification(err || 'Failed to fetch.')
   }
 }

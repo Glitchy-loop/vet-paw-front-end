@@ -20,8 +20,13 @@ const changePass = async email => {
       body: JSON.stringify(email)
     })
     const data = await res.json()
+
     console.log(data)
+
+    if (data.err) {
+      notification(data.err)
+    }
   } catch (err) {
-    alert(err || 'Server problem')
+    notification(err || 'Server problem')
   }
 }

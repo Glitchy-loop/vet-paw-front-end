@@ -24,13 +24,13 @@ const loginUser = async userData => {
     const data = await res.json()
 
     if (data.err) {
-      alert(data.err)
+      notification(data.err)
     }
     if (data.msg === 'Incorrect password.') {
-      alert('Incorrect password. Try again')
+      notification('Incorrect password. Try again')
     }
     if (data.msg === 'User not found.') {
-      alert('User not found.')
+      notification('User not found.')
     }
 
     if (data.msg === 'User successfully logged in') {
@@ -39,6 +39,6 @@ const loginUser = async userData => {
       location.replace('../views/home.html')
     }
   } catch (err) {
-    alert(err || 'Server problem')
+    notification(err || 'Server problem')
   }
 }

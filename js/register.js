@@ -11,7 +11,7 @@ form.addEventListener('submit', e => {
   const confirmPassword = e.target.elements.confirmPassword.value.trim()
 
   if (password !== confirmPassword) {
-    alert(`Password doesn't match.`)
+    notification(`Password doesn't match.`)
   }
   if (password === confirmPassword) {
     registerUser({ name, email, password })
@@ -34,6 +34,6 @@ const registerUser = async userData => {
       location.replace('/index.html')
     }
   } catch (err) {
-    alert(err || 'Server error')
+    notification(err || 'Server error')
   }
 }
