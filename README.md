@@ -9,7 +9,7 @@
   
 <br />
   
-## ⚙️ Back-end repository https://github.com/Glitchy-loop/vet-paw-front-end
+## 🖥️ Back-end repository https://github.com/Glitchy-loop/vet-paw-front-end
 
 <!-- About the Project -->
 ## :star2: About the Project
