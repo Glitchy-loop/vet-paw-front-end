@@ -8,6 +8,8 @@
   </p>
   
 <br />
+  
+## ⚙️ Back-end repository https://github.com/Glitchy-loop/vet-paw-front-end
 
 <!-- About the Project -->
 ## :star2: About the Project
@@ -60,7 +62,7 @@
 
 Start the app locally
   
-  `(Make sure back-end and strapi servers are running in the background for the app to work correctly.)`
+  `Make sure back-end and strapi servers are running in the background for the app to work correctly.`
 
 ```bash
   Use live server to start app locally (index.html).
