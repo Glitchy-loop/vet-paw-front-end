@@ -62,7 +62,7 @@
 
 Start the app locally
   
-  `(Make sure back-end and strapi servers are running in the background for the app to work correctly.)`
+  `Make sure back-end and strapi servers are running in the background for the app to work correctly.`
 
 ```bash
   Use live server to start app locally (index.html).
