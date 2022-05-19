@@ -43,7 +43,6 @@ section {
         font-size: 1.2rem;
         text-align: center;
         margin: 1rem .5rem;
-        // word-break: break-all;
         text-align: center;
 
         .pet-buttons {
@@ -121,12 +120,16 @@ section {
         }
 
         .pet-image {
-
+            width: 8rem;
+            height: 8rem;
+            margin:0 auto;
+            
             img {
                 border-radius: 50%;
-                width: 5rem;
-                margin: 0 auto;
-                transition: 250ms;
+                border:.2rem solid $primaryColor;
+                width: 100%;
+                height: 100%; 
+                object-fit:contain;
             }
         }
     }

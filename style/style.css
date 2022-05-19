@@ -302,12 +302,19 @@ section {
   font-style: italic;
 }
 
+.boxes .box .pet-image {
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto;
+}
+
 .boxes .box .pet-image img {
   border-radius: 50%;
-  width: 5rem;
-  margin: 0 auto;
-  -webkit-transition: 250ms;
-  transition: 250ms;
+  border: 0.2rem solid #7e56da;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .prescription {
