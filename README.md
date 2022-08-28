@@ -8,9 +8,9 @@
   </p>
   
 <br />
-#  :star2: LIVE PREVIEW https://vetpaw-28ac0.web.app/
+:star2: LIVE PREVIEW https://vetpaw-28ac0.web.app/
   <br />
-## ⚙️ Back-end repository https://github.com/Glitchy-loop/vet-paw-back-end
+⚙️ Back-end repository https://github.com/Glitchy-loop/vet-paw-back-end
 
 <!-- About the Project -->
 ## About the Project
