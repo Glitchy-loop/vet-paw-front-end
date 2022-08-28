@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8080/v1'
+const baseUrl = 'https://starfish-app-voi2g.ondigitalocean.app/v1'
 const medUrl = 'http://164.90.201.39:1337/api'
 const form = document.forms.addprescription
 const p = document.querySelector('.container p')

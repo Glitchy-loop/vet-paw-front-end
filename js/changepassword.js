@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8080/v1'
+const baseUrl = 'https://starfish-app-voi2g.ondigitalocean.app/v1'
 const form = document.forms.changePassword
 const token = localStorage.getItem('token')
 const p = document.querySelector('form[name="changePassword"] p')

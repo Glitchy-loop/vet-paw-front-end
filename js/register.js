@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8080/v1'
+const baseUrl = 'http://starfish-app-voi2g.ondigitalocean.app'
 const form = document.forms.registerForm
 
 // Register user form
@@ -21,7 +21,7 @@ form.addEventListener('submit', e => {
 // Register user to the database
 const registerUser = async userData => {
   try {
-    const res = await fetch(`${baseUrl}/users/register`, {
+    const res = await fetch(`${baseUrl}/v1/users/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

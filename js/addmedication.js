@@ -1,5 +1,5 @@
 const token = localStorage.getItem('token')
-const baseUrl = 'http://localhost:8080/v1'
+const baseUrl = 'https://starfish-app-voi2g.ondigitalocean.app/v1'
 const p = document.querySelector('.container p')
 const logOutBtns = document.querySelectorAll('.logOutBtn')
 const form = document.forms.addMedication

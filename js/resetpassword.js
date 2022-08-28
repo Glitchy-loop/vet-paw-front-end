@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8080/v1'
+const baseUrl = 'https://starfish-app-voi2g.ondigitalocean.app/'
 const form = document.forms.resetpassword
 
 // Reset password form
@@ -12,7 +12,7 @@ form.addEventListener('submit', async e => {
 // Request password reset in the database
 const changePass = async email => {
   try {
-    const res = await fetch(`${baseUrl}/users/resetpass`, {
+    const res = await fetch(`${baseUrl}/v1/users/resetpass`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
