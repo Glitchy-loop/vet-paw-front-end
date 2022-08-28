@@ -1,4 +1,4 @@
-const baseUrl = 'http://starfish-app-voi2g.ondigitalocean.app'
+const baseUrl = 'https://orca-app-ubakj.ondigitalocean.app'
 const form = document.forms.registerForm
 
 // Register user form

@@ -1,5 +1,5 @@
 const token = localStorage.getItem('token')
-const medUrl = 'http://164.90.201.39:1337/api'
+const medUrl = 'http://165.227.142.184:1337/api'
 const boxes = document.querySelector('.boxes')
 const h2 = document.querySelector('.container h2')
 const logOutBtns = document.querySelectorAll('.logOutBtn')

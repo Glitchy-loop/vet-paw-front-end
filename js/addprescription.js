@@ -1,5 +1,5 @@
-const baseUrl = 'https://starfish-app-voi2g.ondigitalocean.app/v1'
-const medUrl = 'http://164.90.201.39:1337/api'
+const baseUrl = 'https://orca-app-ubakj.ondigitalocean.app/v1'
+const medUrl = 'http://165.227.142.184:1337/api'
 const form = document.forms.addprescription
 const p = document.querySelector('.container p')
 const token = localStorage.getItem('token')

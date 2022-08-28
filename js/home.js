@@ -1,5 +1,5 @@
 const token = localStorage.getItem('token')
-const baseUrl = 'https://starfish-app-voi2g.ondigitalocean.app/v1'
+const baseUrl = 'https://orca-app-ubakj.ondigitalocean.app/v1'
 const boxes = document.querySelector('.boxes')
 const h2 = document.querySelector('.boxes h2')
 const logOutBtns = document.querySelectorAll('.logOutBtn')

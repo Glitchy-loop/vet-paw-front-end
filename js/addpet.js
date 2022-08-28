@@ -1,4 +1,4 @@
-const baseUrl = 'https://starfish-app-voi2g.ondigitalocean.app/v1'
+const baseUrl = 'https://orca-app-ubakj.ondigitalocean.app/v1'
 const form = document.forms.addPetForm
 
 const token = localStorage.getItem('token')

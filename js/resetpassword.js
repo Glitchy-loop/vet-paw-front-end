@@ -1,4 +1,4 @@
-const baseUrl = 'https://starfish-app-voi2g.ondigitalocean.app/'
+const baseUrl = 'https://orca-app-ubakj.ondigitalocean.app'
 const form = document.forms.resetpassword
 
 // Reset password form
