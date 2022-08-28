@@ -21,7 +21,9 @@ if (!token) {
 // Get all medications from the database
 const getMeds = async () => {
   try {
-    const res = await fetch(`${medUrl}/medications/`)
+    const res = await fetch(`${medUrl}/medications/`, {
+      referrerPolicy: 'unsafe_url'
+    })
     const data = await res.json()
 
     if (data.data.length > 0) {

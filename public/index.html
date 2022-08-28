@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
     <title>Vet-Paw</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,51 +32,70 @@
     <!-- Header -->
     <header>
       <div class="container">
-        <div onclick="window.location='home.html'" class="logo">
+        <div onclick="window.location='index.html'" class="logo">
           <img src="/assets/images/logoCircled.png" alt="VetPaw" />
           <div class="logo-title">Vet<span>Paw</span></div>
         </div>
         <div class="container-flex">
-        <i id="hamburger" class="fa-solid fa-bars"></i>
-        <a class="logOutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-      </div>
+          <i id="hamburger" class="fa-solid fa-bars"></i></a>
+        </div>
         <!-- Desktop nav -->
         <nav class="desktop-nav">
-          <li><a href="home.html">Pets</a></li>
-          <li><a href="medications.html">Medications</a></li>
-          <li><a href="changepassword.html">Change password</a></li>
-          <li><a type="button" class="logOutBtn btn-clean">Log Out</a></li>
+          <li><a href="./views/register.html">Register</a></li>
         </nav>
       </div>
       <div class="container">
         <!-- Mobile nav -->
         <nav class="mobile-nav">
-          <li><a href="home.html">Pets</a></li>
-          <li><a href="medications.html">Medications</a></li>
-          <li><a href="changepassword.html">Change password</a></li>
+          <li><a href="./views/register.html">Register</a></li>
         </nav>
       </div>
     </header>
     <!-- Content -->
     <div class="container">
-      <section>
-        <h1>Medications</h1>
+      <form name="loginForm">
+        <img src="/assets/images/logoCircled.png" alt="">
+        <h1>Welcome back</h1>
+        <p>Please enter your details.</p>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Email"
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          placeholder="Password"
+        />
         <button
-          onclick="window.location='addmedication.html'"
           type="button"
-          class="btn-primary"
+          class="btn-clean"
+          onclick="window.location='./views/resetpassword.html'"
         >
-          Add medication
+          Forgot password
         </button>
-      </section>
-      <h2></h2>
-      <div class="boxes">            
-          </div>
+        <input class="btn-primary" type="submit" value="Login" />
+      </form>
+      <div class="options">
+        <p>Don't have an account?</p>
+        <button
+          type="button"
+          class="btn-clean"
+          onclick="window.location='./views/register.html'"
+        >
+          Register
+        </button>
       </div>
     </div>
     <!-- JS -->
-    <script src="../js/notification.js"></script>
-    <script src="../js/hamburger.js"></script>
-    <script src="../js/medications.js"></script>
+    <script src="./js/notification.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
